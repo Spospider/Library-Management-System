@@ -1,7 +1,7 @@
 
 # Library Management System API
 A RESTful API to manage a library system that handles books, borrowers, and borrowing transactions. Features include CRUD operations for books and borrowers, as well as tracking and managing book borrowings and returns.
-Written in 2 days.
+Written in 2 days for a technical assessment.
 
 ## Usage
 ### Locally
