@@ -169,6 +169,63 @@ lists all overdue books
 - **400 Bad Request**: Returned when the input data is invalid.
 
 
+### Exports
+
+#### GET /exports/overdue-last-month
+Response:
+```json
+[
+    {
+        "borrower": {
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "book": {
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "ISBN": "978-0743273565"
+        },
+        "borrowDate": "2024-09-10",
+        "dueDate": "2024-10-10",
+        "returnDate": null
+    }
+]
+```
+#### GET /exports/borrowings-last-month
+Response:
+```
+[
+    {
+        "borrower": {
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        "book": {
+            "title": "The Great Gatsby",
+            "author": "F. Scott Fitzgerald",
+            "ISBN": "978-0743273565"
+        },
+        "borrowDate": "2024-09-15",
+        "dueDate": "2024-10-15",
+        "returnDate": "2024-10-10"
+    },
+    {
+        "borrower": {
+            "name": "Jane Smith",
+            "email": "jane@example.com"
+        },
+        "book": {
+            "title": "1984",
+            "author": "George Orwell",
+            "ISBN": "978-0451524935"
+        },
+        "borrowDate": "2024-09-20",
+        "dueDate": "2024-10-20",
+        "returnDate": null
+    }
+]
+```
+
 ## DB Schema
 ### book:
 ```
